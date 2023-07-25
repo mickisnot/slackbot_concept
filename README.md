@@ -12,6 +12,11 @@ Created based off tutorial [here](https://www.pragnakalp.com/create-slack-bot-us
 
 Needs [ngrok](https://ngrok.com/) for hosting the slackbot locally
 
+Environment variables need to be set for slack access:
+
+- SLACK_TOKEN The slack token authorising access for the bot
+- SIGNING_SECRET The signing secret used to verify slack events
+
 ## Usage
 
 `python slackbot.py`

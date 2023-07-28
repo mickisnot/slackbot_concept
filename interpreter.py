@@ -9,8 +9,8 @@ Functions:
 Author: Ian Jackson
 """
 
-import add  # TODO: figure out how to dynamically load and call module
-
+import add  #TODO: figure out how to dynamically load and call module
+import lemmatize
 
 def interpret_message(message):
     """
@@ -23,11 +23,15 @@ def interpret_message(message):
         string|None: The response to return, or None
 
     """
+
     args = message.split()
     if args[0] == "add":
         return add.add(args[1], args[2])
 
     if args[0] == "hi":
         return "hello"
+    
+    if args[0] == "lemma":
+        return lemmatize.lemma(message)
 
     return None
